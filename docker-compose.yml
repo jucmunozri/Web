@@ -2,9 +2,7 @@ version: "3.7"
 services:
   web:
     container_name: "web"
-    image: web:1
-    build:
-      context: .
+    image: jucmunozri/web:1
     ports:
       - "3000:3000"
     networks:
