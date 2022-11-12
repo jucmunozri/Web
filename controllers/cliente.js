@@ -25,31 +25,31 @@ const createCliente = async (req = request, res = response) => {
 /**
  * Consulta todos los clientes
  */
-const getClientes = async (req = request, res = response) => {
-  try {
-    console.log(req.query);
-    const estado = req.query.estado;
-    const query = { estado: estado };
-    const clientes = await Cliente.find(query);
-    return res.json(clientes);
-  } catch (e) {
-    return res.status(500).json({ msj: e });
-  }
-};
+// const getClientes = async (req = request, res = response) => {
+//   try {
+//     console.log(req.query);
+//     const estado = req.query.estado;
+//     const query = { estado: estado };
+//     const clientes = await Cliente.find(query);
+//     return res.json(clientes);
+//   } catch (e) {
+//     return res.status(500).json({ msj: e });
+//   }
+// };
 
 /**
  *  Consulta un cliente por su ID
  */
-const getClienteByID = async (req = request, res = response) => {
-  try {
-    const id = req.params.id;
-    const filter = { _id: id };
-    const clienteDB = await Cliente.findOne(filter);
-    return res.json(clienteDB);
-  } catch (e) {
-    return res.status(500).json({ msj: e });
-  }
-};
+// const getClienteByID = async (req = request, res = response) => {
+//   try {
+//     const id = req.params.id;
+//     const filter = { _id: id };
+//     const clienteDB = await Cliente.findOne(filter);
+//     return res.json(clienteDB);
+//   } catch (e) {
+//     return res.status(500).json({ msj: e });
+//   }
+// };
 
 /**
  * Actualiza un cliente por su ID
@@ -88,8 +88,8 @@ const deleteClienteByID = async (req = request, res = response) => {
 
 module.exports = {
   createCliente,
-  getClientes,
-  getClienteByID,
+  // getClientes,
+  // getClienteByID,
   updateClienteByID,
   deleteClienteByID,
 };
